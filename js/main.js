@@ -17,17 +17,26 @@ createApp({
                     done: true,
                 }, 
                 {
-                    text: "Portare Jerry a fare la pipì",
+                    text: "Portare Pelo a fare la pipì",
                     done: true,
                 },
                 {
                     text: "Comprare guida per studiare HTML",
                     done: false,
                 },
-            ]
+            ],
+            
         }
     },
     methods: {
+
+        onClickRemoveItem (indexItem){
+           
+            // console.log("Click", i);
+
+            this.toDoList.splice(indexItem, 1)
+
+        }
 
     }
 }).mount('#app')
