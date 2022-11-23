@@ -19,7 +19,34 @@
 
     <div id="app">
 
+        <main>
+
+            <div class="container mt-5">
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Cosa vuoi ricordare..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Aggiungi</button>
+                </div>
+
+
+                <div class="border rounded-3">
+
+                    <div class="border-bottom" v-for="newTask, i in toDoList">
+
+                        <span></span>
+                        <span :class="(toDoList[i].done === false) ? 'text-decoration-line-through' : ''">{{toDoList[i].text}}</span>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
     </div>
+
+    <script src="js/main.js"></script>
 
 </body>
 
