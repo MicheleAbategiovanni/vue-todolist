@@ -25,6 +25,12 @@ createApp({
                     done: false,
                 },
             ],
+            newToDo: [
+                {
+                    text: "",
+                    
+                }
+            ]
             
         }
     },
@@ -36,6 +42,12 @@ createApp({
 
             this.toDoList.splice(indexItem, 1)
 
+        },
+
+        onBtnSubmit (){
+            this.toDoList.push({
+                text: this.newToDo.text,
+            });
         }
 
     }
